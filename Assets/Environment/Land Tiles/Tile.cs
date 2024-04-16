@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoint : MonoBehaviour
+public class Tile : MonoBehaviour
 {
 
     // [SerializeField] GameObject towerPrefab;
@@ -14,6 +14,27 @@ public class Waypoint : MonoBehaviour
     // {
     //     return isPlaceable;
     // }
+
+    GridManager gridManager;
+    Vector2Int coordinates = new Vector2Int();
+
+    void Awake()
+    {
+        gridManager = FindObjectOfType<GridManager>();
+    }
+
+    void Start()
+    {
+        if (gridManager != null)
+        {
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
+
+            if (!isPlaceable)
+            {
+                gridManager.BlockNode(coordinates);
+            }
+        }
+    }
 
     void OnMouseOver()
     {
