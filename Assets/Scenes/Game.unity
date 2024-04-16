@@ -20585,7 +20585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbee016e766c6c4581d6a88b0ca91ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 5, y: 5}
+  gridSize: {x: 10, y: 10}
+  unityGridSize: 10
 --- !u!4 &2022386426
 Transform:
   m_ObjectHideFlags: 0
@@ -21495,12 +21496,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -133028836438556949, guid: f8b8be757cab0514680c4962f5279cb6, type: 3}
-      propertyPath: destinationCoordinates.x
+      propertyPath: startCoordinates.x
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -133028836438556949, guid: f8b8be757cab0514680c4962f5279cb6, type: 3}
+      propertyPath: startCoordinates.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -133028836438556949, guid: f8b8be757cab0514680c4962f5279cb6, type: 3}
+      propertyPath: destinationCoordinates.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -133028836438556949, guid: f8b8be757cab0514680c4962f5279cb6, type: 3}
       propertyPath: destinationCoordinates.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -133028836438556949, guid: f8b8be757cab0514680c4962f5279cb6, type: 3}
       propertyPath: currentSearchNode.coordinates.x
